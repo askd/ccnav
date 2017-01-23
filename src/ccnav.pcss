@@ -1,0 +1,271 @@
+.ccnav {
+  position: fixed;
+  font-size: 32px;
+  width: 0;
+  height: 0;
+
+  /* Position */
+
+  &_north {
+    top: 0;
+    left: 50%;
+  }
+
+  &_east {
+    top: 50%;
+    right: 0;
+  }
+
+  &_south {
+    bottom: 0;
+    left: 50%;
+  }
+
+  &_west {
+    top: 50%;
+    left: 0;
+  }
+
+  /* Checkbox */
+
+  &-checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  /* Toggle */
+
+  &-toggle {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+  }
+
+  &_north &-toggle {
+    top: 0.4em;
+    left: -0.5em;
+  }
+
+  &_east &-toggle {
+    top: -0.5em;
+    right: 0.4em;
+  }
+
+  &_south &-toggle {
+    bottom: 0.4em;
+    left: -0.5em;
+  }
+
+  &_west &-toggle {
+    top: -0.5em;
+    left: 0.4em;
+  }
+
+  /* Nav */
+
+  &-nav {
+    position: absolute;
+    background-color: inherit;
+    transform: scale(0.5);
+    transition: transform 0.5s;
+  }
+
+  &-checkbox:checked ~ &-nav {
+    transform: scale(1);
+  }
+
+  &_north &-nav {
+    top: 0;
+    border-radius: 50% / 0 0 100% 100%;
+    transform-origin: 50% 0;
+  }
+
+  &_east &-nav {
+    right: 0;
+    border-radius: 200% 0 0 200% / 100%;
+    transform-origin: 100% 50%;
+  }
+
+  &_south &-nav {
+    bottom: 0;
+    border-radius: 50% / 100% 100% 0 0;
+    transform-origin: 50% 100%;
+  }
+
+  &_west &-nav {
+    left: 0;
+    border-radius: 0 200% 200% 0 / 100%;
+    transform-origin: 0 50%;
+  }
+
+  &_north &-nav,
+  &_south &-nav {
+    left: 0;
+    width: 8em;
+    height: 4em;
+    margin: 0 0 0 -4em;
+  }
+
+  &_east &-nav,
+  &_west &-nav {
+    top: 0;
+    width: 4em;
+    height: 8em;
+    margin: -4em 0 0;
+  }
+
+  /* List */
+  &-list {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &-checkbox:checked ~ &-nav &-list {
+    opacity: 1;
+  }
+
+  &_north &-list {
+    top: 0;
+    left: 50%;
+  }
+
+  &_east &-list {
+    top: 50%;
+    right: 0;
+  }
+
+  &_south &-list {
+    bottom: 0;
+    left: 50%;
+  }
+
+  &_west &-list {
+    top: 50%;
+    left: 0;
+  }
+
+  /* Item */
+  &-item {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin: -0.5em;
+  }
+
+  &_north &-item {
+    &:nth-child(1) {
+      top: 0.9em; /* * 0.3 */
+      left: -2.85em; /* * -0.95 */
+    }
+
+    &:nth-child(2) {
+      top: 2.4em; /* * 0.8 */
+      left: -1.76em; /* * -0.59 */
+    }
+
+    &:nth-child(3) {
+      top: 3em;
+      left: 0;
+    }
+
+    &:nth-child(4) {
+      top: 2.4em; /* * 0.8 */
+      left: 1.76em; /* * 0.59 */
+    }
+
+    &:nth-child(5) {
+      top: 0.9em; /* * 0.3 */
+      left: 2.85em; /* * 0.95 */
+    }
+  }
+
+  &_south &-item {
+    &:nth-child(1) {
+      bottom: 0.9em; /* * 0.3 */
+      left: -2.85em; /* * -0.95 */
+    }
+
+    &:nth-child(2) {
+      bottom: 2.4em; /* * 0.8 */
+      left: -1.76em; /* * -0.59 */
+    }
+
+    &:nth-child(3) {
+      bottom: 3em;
+      left: 0;
+    }
+
+    &:nth-child(4) {
+      bottom: 2.4em; /* * 0.8 */
+      left: 1.76em; /* * 0.59 */
+    }
+
+    &:nth-child(5) {
+      bottom: 0.9em; /* * 0.3 */
+      left: 2.85em; /* * 0.95 */
+    }
+  }
+
+  &_east &-item {
+    &:nth-child(1) {
+      top: 2.85em; /* * 0.95 */
+      right: 0.9em; /* * 0.3 */
+    }
+
+    &:nth-child(2) {
+      top: 1.76em; /* * 0.59 */
+      right: 2.4em; /* * 0.8 */
+    }
+
+    &:nth-child(3) {
+      top: 0;
+      right: 3em;
+    }
+
+    &:nth-child(4) {
+      top: -1.76em; /* * -0.59 */
+      right: 2.4em; /* * 0.8 */
+    }
+
+    &:nth-child(5) {
+      top: -2.85em; /* * -0.95 */
+      right: 0.9em; /* * 0.3 */
+    }
+  }
+
+  &_west &-item {
+    &:nth-child(1) {
+      top: -2.85em; /* * -0.95 */
+      left: 0.9em; /* * 0.3 */
+    }
+
+    &:nth-child(2) {
+      top: -1.76em; /* * -0.59 */
+      left: 2.4em; /* * 0.8 */
+    }
+
+    &:nth-child(3) {
+      top: 0;
+      left: 3em;
+    }
+
+    &:nth-child(4) {
+      top: 1.76em; /* * 0.59 */
+      left: 2.4em; /* * 0.8 */
+    }
+
+    &:nth-child(5) {
+      top: 2.85em; /* * 0.95 */
+      left: 0.9em; /* * 0.3 */
+    }
+  }
+}

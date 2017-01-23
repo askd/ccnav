@@ -1,0 +1,21 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ccnav {
+  font-size: 32px;
+  color: #fff;
+  background-color: #789;
+}
+
+.icon {
+  margin: -9px;
+}
+
+.icon.icon--ei-sc-facebook,
+.icon.icon--ei-sc-twitter,
+.icon.icon--ei-sc-google-plus,
+.icon.icon--ei-sc-linkedin,
+.icon.icon--ei-sc-pinterest {
+  fill: currentColor;
+}

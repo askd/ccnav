@@ -1,0 +1,33 @@
+{
+  "name": "ccnav",
+  "version": "0.0.0",
+  "description": "CSS circular navigation",
+  "files": [
+    "*.md",
+    "lib/*.css"
+  ],
+  "scripts": {
+    "lint": "$(npm bin)/stylelint **/*.css",
+    "dev:src": "postcss -w -u autoprefixer -u postcss-nested -o ./lib/ccnav.css src/ccnav.pcss",
+    "dev:demo": "postcss -w -u autoprefixer -u postcss-nested -o ./demo/style.css demo/style.pcss",
+    "dev": "npm run dev:src && npm run dev:demo",
+    "build:src": "postcss -u autoprefixer -u postcss-nested -o ./lib/ccnav.css src/ccnav.pcss",
+    "build:demo": "postcss -u autoprefixer -u postcss-nested -o ./demo/style.css demo/style.pcss",
+    "build": "npm run build:src && npm run build:demo",
+    "prepublish": "npm run build"
+  },
+  "author": "Anna Selezniova",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/askd/ccnav"
+  },
+  "homepage": "https://ccnav.github.io",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "postcss-cli": "^2.6.0",
+    "postcss-nested": "^1.0.0",
+    "stylelint": "^7.7.0",
+    "stylelint-config-standard": "^15.0.1"
+  }
+}

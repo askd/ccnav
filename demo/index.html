@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="css,circular,navigation" />
+    <!-- <link rel="icon" type="image/png" href="assets/favicon.png"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../lib/ccnav.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
+    <title>CSS Circular Navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">CSS Circular Navigation</h1>
+    </header>
+
+    <aside class="ccnav ccnav_north">
+
+      <input class="ccnav-checkbox" type="checkbox" autocomplete="off" id="ccnav-north">
+
+      <nav class="ccnav-nav">
+        <ul class="ccnav-list">
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-user" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-search" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-comment" data-size="m"></div>
+          </li>
+        </ul>
+      </nav>
+
+      <label class="ccnav-toggle" for="ccnav-north">
+        <div class="icon" data-icon="ei-navicon" data-size="m"></div>
+      </label>
+
+    </aside>
+
+    <aside class="ccnav ccnav_east">
+
+      <input class="ccnav-checkbox" type="checkbox" autocomplete="off" id="ccnav-east">
+
+      <nav class="ccnav-nav">
+        <ul class="ccnav-list">
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-sc-facebook" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-sc-twitter" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-sc-google-plus" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-sc-linkedin" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-sc-pinterest" data-size="m"></div>
+          </li>
+        </ul>
+      </nav>
+
+      <label class="ccnav-toggle" for="ccnav-east">
+        <div class="icon" data-icon="ei-share-apple" data-size="m"></div>
+      </label>
+
+    </aside>
+
+    <aside class="ccnav ccnav_south">
+
+      <input class="ccnav-checkbox" type="checkbox" autocomplete="off" id="ccnav-south">
+
+      <nav class="ccnav-nav">
+        <ul class="ccnav-list">
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-like" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-heart" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+        </ul>
+      </nav>
+
+      <label class="ccnav-toggle" for="ccnav-south">
+        <div class="icon" data-icon="ei-like" data-size="m"></div>
+      </label>
+
+    </aside>
+
+    <aside class="ccnav ccnav_west">
+
+      <input class="ccnav-checkbox" type="checkbox" autocomplete="off" id="ccnav-west">
+
+      <nav class="ccnav-nav">
+        <ul class="ccnav-list">
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-chart" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-calendar" data-size="m"></div>
+          </li>
+          <li class="ccnav-item">
+
+          </li>
+          <li class="ccnav-item">
+            <div class="icon" data-icon="ei-trash" data-size="m"></div>
+          </li>
+        </ul>
+      </nav>
+
+      <label class="ccnav-toggle" for="ccnav-west">
+        <div class="icon" data-icon="ei-gear" data-size="m"></div>
+      </label>
+
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
